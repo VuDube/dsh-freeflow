@@ -16,7 +16,7 @@ const baseConfig = {
 };
 
 test('parseModelTarget routes provider-prefixed models and strips the prefix', () => {
-  assert.deepEqual(parseModelTarget('freellmpool/gpt-x'), { providerId: 'freellmpool', model: 'gpt-x' });
+  assert.deepEqual(parseModelTarget('freellmpool/gpt-x', ['anonymous', 'freellmpool']), { providerId: 'freellmpool', model: 'gpt-x' });
   assert.deepEqual(parseModelTarget('some/openai-style-id'), { providerId: null, model: 'some/openai-style-id' });
   assert.deepEqual(parseModelTarget(''), { providerId: null, model: undefined });
 });
@@ -25,12 +25,12 @@ test('buildOrder pins the default provider first, then health rank then latency'
   const config = { ...baseConfig };
   const mk = (id) => ({ id });
   const providers = [mk('anonymous'), mk('freellmpool')];
-  const health = { snapshot: () => ({}) };
+  const health = { snapshot: () => ({}), inCooldown: () => false };
   assert.deepEqual(buildOrder(config, providers, health), ['anonymous', 'freellmpool']);
 
   const latencyHealth = {
     snapshot: (id) => (id === 'anonymous' ? { status: 'healthy', latencyMs: 900 } : { status: 'healthy', latencyMs: 120 }),
-    snapshotOf: null,
+    inCooldown: () => false,
   };
   assert.deepEqual(buildOrder(config, providers, latencyHealth), ['anonymous', 'freellmpool']);
   const noPin = { ...config, defaultProvider: null };

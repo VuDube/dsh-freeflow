@@ -14,6 +14,21 @@
       "apiKey": "",
       "models": []
     },
+    "llm7": {
+      "enabled": false,
+      "baseUrl": "https://api.llm7.io/v1",
+      "apiKey": ""
+    },
+    "ovhcloud": {
+      "enabled": true,
+      "baseUrl": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+      "apiKey": ""
+    },
+    "kilo": {
+      "enabled": true,
+      "baseUrl": "https://api.kilo.ai/api/gateway",
+      "apiKey": ""
+    },
     "freellmpool": {
       "enabled": true,
       "baseUrl": "http://127.0.0.1:8080/v1",
@@ -24,7 +39,46 @@
       "enabled": true,
       "endpoint": "",
       "tokenFile": "~/.dsh/gemini-oauth-bridge.json"
+    },
+    "groq": {
+      "type": "byok",
+      "preset": "groq",
+      "enabled": true,
+      "apiKey": ""
+    },
+    "gemini": {
+      "type": "byok",
+      "preset": "gemini",
+      "enabled": true,
+      "apiKey": ""
+    },
+    "nvidia": {
+      "type": "byok",
+      "preset": "nvidia",
+      "enabled": true,
+      "apiKey": ""
+    },
+    "openrouter": {
+      "type": "byok",
+      "preset": "openrouter",
+      "enabled": true,
+      "apiKey": ""
+    },
+    "cloudflare": {
+      "type": "byok",
+      "preset": "cloudflare",
+      "enabled": true,
+      "accountId": "",
+      "apiKey": ""
     }
+  },
+  "quota": {
+    "groq": { "dailyRequestCap": 1000, "dailyTokenCap": 200000 },
+    "openrouter": { "dailyRequestCap": 50 },
+    "cloudflare": { "dailyTokenCap": 10000 }
+  },
+  "catalog": {
+    "modelCooldownMs": 1800000
   },
   "healthCheck": {
     "intervalMs": 30000,

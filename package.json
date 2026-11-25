@@ -1,6 +1,6 @@
 {
   "name": "dsh-freeflow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Free-tier LLM router for DeepSeek Harness — zero cost, plug-and-play.",
   "type": "module",
   "main": "./src/index.js",
@@ -26,7 +26,11 @@
     "dsh-plugin",
     "cordis",
     "opencode-zen",
-    "freellmpool"
+    "freellmpool",
+    "byok",
+    "llm7",
+    "ovhcloud",
+    "kilo"
   ],
   "engines": {
     "node": ">=22.19.0"

@@ -1,0 +1,2604 @@
+{
+  "checkedAt": "2026-11-25T17:16:27.429Z",
+  "providers": [
+    {
+      "id": "llm7",
+      "label": "LLM7.io (free API key required)",
+      "status": "ok",
+      "models": 84,
+      "chat": null,
+      "note": "llm7 now serves only pro/turbo usage-based models; chat needs a free LLM7_API_KEY. Model listing stays open."
+    },
+    {
+      "id": "ovhcloud",
+      "label": "OVHcloud AI Endpoints (keyless, EU)",
+      "status": "ok",
+      "models": 23,
+      "chat": {
+        "model": "Meta-Llama-3_3-70B-Instruct",
+        "status": 429,
+        "verified": false,
+        "rateLimited": true,
+        "sample": "{\n  \"message\":\"API rate limit exceeded\",\n  \"request_id\":\"3eb91a1c9abf320b35197472d790405a\"",
+        "retriedAfterRateLimit": true
+      }
+    },
+    {
+      "id": "kilo",
+      "label": "Kilo Gateway (keyless free pool, 200 req/hr)",
+      "status": "ok",
+      "models": 13,
+      "chat": {
+        "model": "kilo-auto/free",
+        "status": 200,
+        "verified": true,
+        "rateLimited": false,
+        "sample": "{\"id\":\"gen-1795627014-5mUfiX27Jp1PGwnE3chg\",\"object\":\"chat.completion\",\"created\":179562701"
+      }
+    },
+    {
+      "id": "anonymous",
+      "label": "OpenCode Zen (anonymous)",
+      "status": "ok",
+      "models": 108,
+      "chat": null
+    }
+  ],
+  "total": 201,
+  "categories": {
+    "chat": 104,
+    "fast": 50,
+    "large": 16,
+    "reasoning": 15,
+    "vision": 6,
+    "coder": 5,
+    "small": 5
+  },
+  "models": [
+    {
+      "id": "anonymous/beam-free",
+      "upstream_model": "beam-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "anonymous/big-pickle",
+      "upstream_model": "big-pickle",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "anonymous/claude-fable-5",
+      "upstream_model": "claude-fable-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "anonymous/claude-fable-5-1",
+      "upstream_model": "claude-fable-5-1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 4
+    },
+    {
+      "id": "anonymous/claude-fable-5-2",
+      "upstream_model": "claude-fable-5-2",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 5
+    },
+    {
+      "id": "anonymous/claude-haiku-4-5",
+      "upstream_model": "claude-haiku-4-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 6
+    },
+    {
+      "id": "anonymous/claude-haiku-5-5",
+      "upstream_model": "claude-haiku-5-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 7
+    },
+    {
+      "id": "anonymous/claude-sonnet-4-5",
+      "upstream_model": "claude-sonnet-4-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 8
+    },
+    {
+      "id": "anonymous/claude-sonnet-4-6",
+      "upstream_model": "claude-sonnet-4-6",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 9
+    },
+    {
+      "id": "anonymous/claude-sonnet-5",
+      "upstream_model": "claude-sonnet-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 10
+    },
+    {
+      "id": "anonymous/claude-sonnet-5-5",
+      "upstream_model": "claude-sonnet-5-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 11
+    },
+    {
+      "id": "anonymous/flint-40b-free",
+      "upstream_model": "flint-40b-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 12
+    },
+    {
+      "id": "anonymous/glm-5.3",
+      "upstream_model": "glm-5.3",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 13
+    },
+    {
+      "id": "anonymous/gpt-5",
+      "upstream_model": "gpt-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 14
+    },
+    {
+      "id": "anonymous/gpt-5-codex",
+      "upstream_model": "gpt-5-codex",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 15
+    },
+    {
+      "id": "anonymous/gpt-5.1",
+      "upstream_model": "gpt-5.1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 16
+    },
+    {
+      "id": "anonymous/gpt-5.1-codex",
+      "upstream_model": "gpt-5.1-codex",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 17
+    },
+    {
+      "id": "anonymous/gpt-5.2",
+      "upstream_model": "gpt-5.2",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 18
+    },
+    {
+      "id": "anonymous/gpt-5.2-codex",
+      "upstream_model": "gpt-5.2-codex",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 19
+    },
+    {
+      "id": "anonymous/gpt-5.3-codex",
+      "upstream_model": "gpt-5.3-codex",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 20
+    },
+    {
+      "id": "anonymous/gpt-5.3-codex-spark",
+      "upstream_model": "gpt-5.3-codex-spark",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 21
+    },
+    {
+      "id": "anonymous/gpt-5.4",
+      "upstream_model": "gpt-5.4",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 22
+    },
+    {
+      "id": "anonymous/gpt-5.5",
+      "upstream_model": "gpt-5.5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 23
+    },
+    {
+      "id": "anonymous/gpt-5.6-luna",
+      "upstream_model": "gpt-5.6-luna",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 24
+    },
+    {
+      "id": "anonymous/gpt-5.6-sol",
+      "upstream_model": "gpt-5.6-sol",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 25
+    },
+    {
+      "id": "anonymous/gpt-5.6-terra",
+      "upstream_model": "gpt-5.6-terra",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 26
+    },
+    {
+      "id": "anonymous/gpt-6-astra",
+      "upstream_model": "gpt-6-astra",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 27
+    },
+    {
+      "id": "anonymous/gpt-6-luna",
+      "upstream_model": "gpt-6-luna",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 28
+    },
+    {
+      "id": "anonymous/gpt-6-luna-decision",
+      "upstream_model": "gpt-6-luna-decision",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 29
+    },
+    {
+      "id": "anonymous/gpt-6-sol",
+      "upstream_model": "gpt-6-sol",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 30
+    },
+    {
+      "id": "anonymous/gpt-6.1-sol",
+      "upstream_model": "gpt-6.1-sol",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 31
+    },
+    {
+      "id": "anonymous/gpt-6.2-astra",
+      "upstream_model": "gpt-6.2-astra",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 32
+    },
+    {
+      "id": "anonymous/gpt-6.2-sol",
+      "upstream_model": "gpt-6.2-sol",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 33
+    },
+    {
+      "id": "anonymous/gpt-live-1",
+      "upstream_model": "gpt-live-1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 34
+    },
+    {
+      "id": "anonymous/gpt-live-1.1",
+      "upstream_model": "gpt-live-1.1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 35
+    },
+    {
+      "id": "anonymous/grok-4.5",
+      "upstream_model": "grok-4.5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 36
+    },
+    {
+      "id": "anonymous/grok-4.6",
+      "upstream_model": "grok-4.6",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 37
+    },
+    {
+      "id": "anonymous/grok-4.7",
+      "upstream_model": "grok-4.7",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 38
+    },
+    {
+      "id": "anonymous/grok-build-0.1",
+      "upstream_model": "grok-build-0.1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 39
+    },
+    {
+      "id": "anonymous/grok-imagine-video-1.5",
+      "upstream_model": "grok-imagine-video-1.5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 40
+    },
+    {
+      "id": "anonymous/iceman-free",
+      "upstream_model": "iceman-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 41
+    },
+    {
+      "id": "anonymous/jev-1.13",
+      "upstream_model": "jev-1.13",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 42
+    },
+    {
+      "id": "anonymous/jev-1.13-free",
+      "upstream_model": "jev-1.13-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 43
+    },
+    {
+      "id": "anonymous/jev-1.14",
+      "upstream_model": "jev-1.14",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 44
+    },
+    {
+      "id": "anonymous/kimi-k3",
+      "upstream_model": "kimi-k3",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 45
+    },
+    {
+      "id": "anonymous/muse-ember-1.0",
+      "upstream_model": "muse-ember-1.0",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 46
+    },
+    {
+      "id": "anonymous/muse-spark-1.2",
+      "upstream_model": "muse-spark-1.2",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 47
+    },
+    {
+      "id": "anonymous/muse-spark-1.3",
+      "upstream_model": "muse-spark-1.3",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 48
+    },
+    {
+      "id": "anonymous/muse-wonder-1.0",
+      "upstream_model": "muse-wonder-1.0",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 49
+    },
+    {
+      "id": "anonymous/nemotron-3.5-lightning-free",
+      "upstream_model": "nemotron-3.5-lightning-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 50
+    },
+    {
+      "id": "anonymous/qwen3.5-plus",
+      "upstream_model": "qwen3.5-plus",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 51
+    },
+    {
+      "id": "anonymous/qwen3.6-plus",
+      "upstream_model": "qwen3.6-plus",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 52
+    },
+    {
+      "id": "anonymous/tidepool-alpha-free",
+      "upstream_model": "tidepool-alpha-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 53
+    },
+    {
+      "id": "anonymous/voyage-4",
+      "upstream_model": "voyage-4",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 54
+    },
+    {
+      "id": "kilo/kilo-auto/free",
+      "upstream_model": "kilo-auto/free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 55
+    },
+    {
+      "id": "kilo/nvidia/nemotron-3.5-lightning:free",
+      "upstream_model": "nvidia/nemotron-3.5-lightning:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 56
+    },
+    {
+      "id": "kilo/openrouter/free",
+      "upstream_model": "openrouter/free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 57
+    },
+    {
+      "id": "kilo/particle-ai/particle-1:free",
+      "upstream_model": "particle-ai/particle-1:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 58
+    },
+    {
+      "id": "kilo/recursive/flint-v1.0:free",
+      "upstream_model": "recursive/flint-v1.0:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 59
+    },
+    {
+      "id": "kilo/reflection/beam-free",
+      "upstream_model": "reflection/beam-free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 60
+    },
+    {
+      "id": "kilo/stealth/glyph-cluster",
+      "upstream_model": "stealth/glyph-cluster",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 61
+    },
+    {
+      "id": "ovhcloud/gemma-4-26b-a4b",
+      "upstream_model": "gemma-4-26b-a4b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 62
+    },
+    {
+      "id": "ovhcloud/gpt-oss-20b",
+      "upstream_model": "gpt-oss-20b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 63
+    },
+    {
+      "id": "ovhcloud/laguna-xs-2.1",
+      "upstream_model": "laguna-xs-2.1",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 64
+    },
+    {
+      "id": "ovhcloud/Olala-v1.0-summarise",
+      "upstream_model": "Olala-v1.0-summarise",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 65
+    },
+    {
+      "id": "ovhcloud/Olala-v1.0-translate",
+      "upstream_model": "Olala-v1.0-translate",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 66
+    },
+    {
+      "id": "ovhcloud/Qwen3.6-27B",
+      "upstream_model": "Qwen3.6-27B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 67
+    },
+    {
+      "id": "ovhcloud/qwen3.6-35b-a3b",
+      "upstream_model": "qwen3.6-35b-a3b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 68
+    },
+    {
+      "id": "ovhcloud/Qwen3.8-27B",
+      "upstream_model": "Qwen3.8-27B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 69
+    },
+    {
+      "id": "ovhcloud/solaria-3",
+      "upstream_model": "solaria-3",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "chat",
+      "score": 3,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 70
+    },
+    {
+      "id": "anonymous/claude-opus-4-5",
+      "upstream_model": "claude-opus-4-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 71
+    },
+    {
+      "id": "anonymous/claude-opus-4-6",
+      "upstream_model": "claude-opus-4-6",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 72
+    },
+    {
+      "id": "anonymous/claude-opus-4-7",
+      "upstream_model": "claude-opus-4-7",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 73
+    },
+    {
+      "id": "anonymous/claude-opus-4-8",
+      "upstream_model": "claude-opus-4-8",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 74
+    },
+    {
+      "id": "anonymous/claude-opus-5",
+      "upstream_model": "claude-opus-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 75
+    },
+    {
+      "id": "anonymous/claude-opus-5-5",
+      "upstream_model": "claude-opus-5-5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 76
+    },
+    {
+      "id": "anonymous/codestral-embed",
+      "upstream_model": "codestral-embed",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "coder",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 77
+    },
+    {
+      "id": "anonymous/kimi-k2.7-code",
+      "upstream_model": "kimi-k2.7-code",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "coder",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 78
+    },
+    {
+      "id": "anonymous/voyage-code-4",
+      "upstream_model": "voyage-code-4",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "coder",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 79
+    },
+    {
+      "id": "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "upstream_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "reasoning",
+      "score": 2,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 80
+    },
+    {
+      "id": "llm7/anthropic/claude-sonnet-4-6",
+      "upstream_model": "anthropic/claude-sonnet-4-6",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 81
+    },
+    {
+      "id": "llm7/anthropic/claude-sonnet-5",
+      "upstream_model": "anthropic/claude-sonnet-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 82
+    },
+    {
+      "id": "llm7/anthropic/claude-sonnet-5-5",
+      "upstream_model": "anthropic/claude-sonnet-5-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 83
+    },
+    {
+      "id": "llm7/claude-fable-5",
+      "upstream_model": "claude-fable-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 84
+    },
+    {
+      "id": "llm7/claude-fable-5-2",
+      "upstream_model": "claude-fable-5-2",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 85
+    },
+    {
+      "id": "llm7/claude-haiku-4-5",
+      "upstream_model": "claude-haiku-4-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 86
+    },
+    {
+      "id": "llm7/claude-haiku-5-5",
+      "upstream_model": "claude-haiku-5-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 87
+    },
+    {
+      "id": "llm7/claude-sonnet-4-6",
+      "upstream_model": "claude-sonnet-4-6",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 88
+    },
+    {
+      "id": "llm7/claude-sonnet-5",
+      "upstream_model": "claude-sonnet-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 89
+    },
+    {
+      "id": "llm7/codex/gpt-6-astra",
+      "upstream_model": "codex/gpt-6-astra",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 90
+    },
+    {
+      "id": "llm7/dark-beast-krea2",
+      "upstream_model": "dark-beast-krea2",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 91
+    },
+    {
+      "id": "llm7/gemma-3-27b",
+      "upstream_model": "gemma-3-27b",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 92
+    },
+    {
+      "id": "llm7/gemma-4-uncensored",
+      "upstream_model": "gemma-4-uncensored",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 93
+    },
+    {
+      "id": "llm7/gemma4:31b",
+      "upstream_model": "gemma4:31b",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 94
+    },
+    {
+      "id": "llm7/glm-5.2",
+      "upstream_model": "glm-5.2",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 95
+    },
+    {
+      "id": "llm7/glm-5.3",
+      "upstream_model": "glm-5.3",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 96
+    },
+    {
+      "id": "llm7/glm-5.3-uncensored",
+      "upstream_model": "glm-5.3-uncensored",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 97
+    },
+    {
+      "id": "llm7/gpt-5.6-luna",
+      "upstream_model": "gpt-5.6-luna",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 98
+    },
+    {
+      "id": "llm7/gpt-5.6-sol",
+      "upstream_model": "gpt-5.6-sol",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 99
+    },
+    {
+      "id": "llm7/gpt-5.6-terra",
+      "upstream_model": "gpt-5.6-terra",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 100
+    },
+    {
+      "id": "llm7/gpt-6-astra",
+      "upstream_model": "gpt-6-astra",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 101
+    },
+    {
+      "id": "llm7/gpt-6-luna",
+      "upstream_model": "gpt-6-luna",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 102
+    },
+    {
+      "id": "llm7/gpt-6-sol",
+      "upstream_model": "gpt-6-sol",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 103
+    },
+    {
+      "id": "llm7/gpt-6.1-sol",
+      "upstream_model": "gpt-6.1-sol",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 104
+    },
+    {
+      "id": "llm7/gpt-6.2-astra",
+      "upstream_model": "gpt-6.2-astra",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 105
+    },
+    {
+      "id": "llm7/gpt-6.2-sol",
+      "upstream_model": "gpt-6.2-sol",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 106
+    },
+    {
+      "id": "llm7/gpt-oss:20b",
+      "upstream_model": "gpt-oss:20b",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 107
+    },
+    {
+      "id": "llm7/grok-4.7",
+      "upstream_model": "grok-4.7",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 108
+    },
+    {
+      "id": "llm7/jev-latest",
+      "upstream_model": "jev-latest",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 109
+    },
+    {
+      "id": "llm7/kimi-k2.6",
+      "upstream_model": "kimi-k2.6",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 110
+    },
+    {
+      "id": "llm7/kimi-k3",
+      "upstream_model": "kimi-k3",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 111
+    },
+    {
+      "id": "llm7/llama-4-maverick",
+      "upstream_model": "llama-4-maverick",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 112
+    },
+    {
+      "id": "llm7/mistral-Nemo-Instruct-2407",
+      "upstream_model": "mistral-Nemo-Instruct-2407",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 113
+    },
+    {
+      "id": "llm7/muse-spark-open",
+      "upstream_model": "muse-spark-open",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 114
+    },
+    {
+      "id": "anonymous/deepseek-v4-pro",
+      "upstream_model": "deepseek-v4-pro",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 118
+    },
+    {
+      "id": "anonymous/deepseek-v4.1-flash",
+      "upstream_model": "deepseek-v4.1-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 119
+    },
+    {
+      "id": "anonymous/deepseek-v4.1-flash-free",
+      "upstream_model": "deepseek-v4.1-flash-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 120
+    },
+    {
+      "id": "anonymous/gemini-3.5-flash",
+      "upstream_model": "gemini-3.5-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 121
+    },
+    {
+      "id": "anonymous/gemini-3.5-flash-lite",
+      "upstream_model": "gemini-3.5-flash-lite",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 122
+    },
+    {
+      "id": "anonymous/gemini-3.6-flash",
+      "upstream_model": "gemini-3.6-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 123
+    },
+    {
+      "id": "anonymous/gemini-3.7-flash",
+      "upstream_model": "gemini-3.7-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 124
+    },
+    {
+      "id": "anonymous/gemini-3.8-flash",
+      "upstream_model": "gemini-3.8-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 125
+    },
+    {
+      "id": "anonymous/gemini-4-argon",
+      "upstream_model": "gemini-4-argon",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 126
+    },
+    {
+      "id": "anonymous/gemini-4-carbon",
+      "upstream_model": "gemini-4-carbon",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 127
+    },
+    {
+      "id": "anonymous/gemini-4-hydrogen",
+      "upstream_model": "gemini-4-hydrogen",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 128
+    },
+    {
+      "id": "anonymous/gemini-4-neon",
+      "upstream_model": "gemini-4-neon",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 129
+    },
+    {
+      "id": "anonymous/gemini-decision-1",
+      "upstream_model": "gemini-decision-1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 130
+    },
+    {
+      "id": "anonymous/gemini-nano-banana-2.1",
+      "upstream_model": "gemini-nano-banana-2.1",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 133
+    },
+    {
+      "id": "anonymous/gemini-omni-1.2-flash",
+      "upstream_model": "gemini-omni-1.2-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "vision",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 134
+    },
+    {
+      "id": "anonymous/glm-5.3-flash",
+      "upstream_model": "glm-5.3-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 135
+    },
+    {
+      "id": "anonymous/gpt-5-nano",
+      "upstream_model": "gpt-5-nano",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 136
+    },
+    {
+      "id": "anonymous/gpt-5.1-codex-max",
+      "upstream_model": "gpt-5.1-codex-max",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 137
+    },
+    {
+      "id": "anonymous/gpt-5.1-codex-mini",
+      "upstream_model": "gpt-5.1-codex-mini",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 138
+    },
+    {
+      "id": "anonymous/gpt-5.4-mini",
+      "upstream_model": "gpt-5.4-mini",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 139
+    },
+    {
+      "id": "anonymous/gpt-5.4-nano",
+      "upstream_model": "gpt-5.4-nano",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 140
+    },
+    {
+      "id": "anonymous/gpt-5.4-pro",
+      "upstream_model": "gpt-5.4-pro",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 141
+    },
+    {
+      "id": "anonymous/gpt-5.5-pro",
+      "upstream_model": "gpt-5.5-pro",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 142
+    },
+    {
+      "id": "anonymous/grok-imagine-video-1.5-lite",
+      "upstream_model": "grok-imagine-video-1.5-lite",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 145
+    },
+    {
+      "id": "anonymous/hy4-flash-free",
+      "upstream_model": "hy4-flash-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 146
+    },
+    {
+      "id": "anonymous/kimi-k3.1-pro",
+      "upstream_model": "kimi-k3.1-pro",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 147
+    },
+    {
+      "id": "anonymous/mimo-v2.6-flash-free",
+      "upstream_model": "mimo-v2.6-flash-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 148
+    },
+    {
+      "id": "anonymous/minimax-m2.5",
+      "upstream_model": "minimax-m2.5",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 149
+    },
+    {
+      "id": "anonymous/minimax-m2.7",
+      "upstream_model": "minimax-m2.7",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 150
+    },
+    {
+      "id": "anonymous/minimax-m3",
+      "upstream_model": "minimax-m3",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 151
+    },
+    {
+      "id": "anonymous/mistral-large-4",
+      "upstream_model": "mistral-large-4",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 153
+    },
+    {
+      "id": "anonymous/nemotron-3.5-super-vl-free",
+      "upstream_model": "nemotron-3.5-super-vl-free",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "vision",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 154
+    },
+    {
+      "id": "anonymous/qwen3.8-flash",
+      "upstream_model": "qwen3.8-flash",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 156
+    },
+    {
+      "id": "anonymous/qwen3.8-max",
+      "upstream_model": "qwen3.8-max",
+      "provider": "anonymous",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 157
+    },
+    {
+      "id": "kilo/baidu/ernie-5.5-flash-preview:free",
+      "upstream_model": "baidu/ernie-5.5-flash-preview:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 160
+    },
+    {
+      "id": "kilo/inclusionai/ling-3.2-flash:free",
+      "upstream_model": "inclusionai/ling-3.2-flash:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 161
+    },
+    {
+      "id": "kilo/liquid/lfm-3-1.7b:free",
+      "upstream_model": "liquid/lfm-3-1.7b:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "small",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 162
+    },
+    {
+      "id": "kilo/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "upstream_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 163
+    },
+    {
+      "id": "kilo/nvidia/nemotron-3.5-super-vl:free",
+      "upstream_model": "nvidia/nemotron-3.5-super-vl:free",
+      "provider": "kilo",
+      "tier": "keyless",
+      "category": "vision",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 164
+    },
+    {
+      "id": "llm7/anthropic/claude-opus-4-6",
+      "upstream_model": "anthropic/claude-opus-4-6",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 165
+    },
+    {
+      "id": "llm7/anthropic/claude-opus-4-7",
+      "upstream_model": "anthropic/claude-opus-4-7",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 166
+    },
+    {
+      "id": "llm7/anthropic/claude-opus-4-8",
+      "upstream_model": "anthropic/claude-opus-4-8",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 167
+    },
+    {
+      "id": "llm7/claude-opus-4-6",
+      "upstream_model": "claude-opus-4-6",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 168
+    },
+    {
+      "id": "llm7/claude-opus-4-8",
+      "upstream_model": "claude-opus-4-8",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 169
+    },
+    {
+      "id": "llm7/claude-opus-5",
+      "upstream_model": "claude-opus-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 170
+    },
+    {
+      "id": "llm7/claude-opus-5-5",
+      "upstream_model": "claude-opus-5-5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 171
+    },
+    {
+      "id": "llm7/claude-opus-5.5",
+      "upstream_model": "claude-opus-5.5",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "reasoning",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 172
+    },
+    {
+      "id": "llm7/codestral-latest",
+      "upstream_model": "codestral-latest",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "coder",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 173
+    },
+    {
+      "id": "llm7/kimi-k2.7-code",
+      "upstream_model": "kimi-k2.7-code",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "coder",
+      "score": 1,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 174
+    },
+    {
+      "id": "ovhcloud/clef-flash",
+      "upstream_model": "clef-flash",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 175
+    },
+    {
+      "id": "ovhcloud/DeepSeek-V4.1-Flash-1017",
+      "upstream_model": "DeepSeek-V4.1-Flash-1017",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 176
+    },
+    {
+      "id": "ovhcloud/gpt-oss-120b",
+      "upstream_model": "gpt-oss-120b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 177
+    },
+    {
+      "id": "ovhcloud/Meta-Llama-3_3-70B-Instruct",
+      "upstream_model": "Meta-Llama-3_3-70B-Instruct",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 178
+    },
+    {
+      "id": "ovhcloud/Mistral-Small-3.2-24B-Instruct-2506",
+      "upstream_model": "Mistral-Small-3.2-24B-Instruct-2506",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 179
+    },
+    {
+      "id": "ovhcloud/nemotron3-nano-30b",
+      "upstream_model": "nemotron3-nano-30b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "fast",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 180
+    },
+    {
+      "id": "ovhcloud/nemotron3-omni-30b",
+      "upstream_model": "nemotron3-omni-30b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "vision",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 181
+    },
+    {
+      "id": "ovhcloud/Olala-v1.0-mini-7A1B",
+      "upstream_model": "Olala-v1.0-mini-7A1B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "small",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 182
+    },
+    {
+      "id": "ovhcloud/Qwen2.5-VL-72B-Instruct",
+      "upstream_model": "Qwen2.5-VL-72B-Instruct",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "vision",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 183
+    },
+    {
+      "id": "ovhcloud/qwen3-vl-30b-a3b",
+      "upstream_model": "qwen3-vl-30b-a3b",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "vision",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 184
+    },
+    {
+      "id": "ovhcloud/Qwen3.5-397B-A17B",
+      "upstream_model": "Qwen3.5-397B-A17B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "large",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 185
+    },
+    {
+      "id": "ovhcloud/Qwen3.5-9B",
+      "upstream_model": "Qwen3.5-9B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "small",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 186
+    },
+    {
+      "id": "ovhcloud/Qwen3Guard-Gen-0.6B",
+      "upstream_model": "Qwen3Guard-Gen-0.6B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "small",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 187
+    },
+    {
+      "id": "ovhcloud/Qwen3Guard-Gen-8B",
+      "upstream_model": "Qwen3Guard-Gen-8B",
+      "provider": "ovhcloud",
+      "tier": "keyless",
+      "category": "small",
+      "score": 1,
+      "reasons": [
+        "provider unavailable",
+        "zero-credential tier"
+      ],
+      "rank": 188
+    },
+    {
+      "id": "llm7/chroma-v.46-flash",
+      "upstream_model": "chroma-v.46-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 189
+    },
+    {
+      "id": "llm7/deepseek-v4-flash-0731-fast",
+      "upstream_model": "deepseek-v4-flash-0731-fast",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 190
+    },
+    {
+      "id": "llm7/deepseek-v4-flash:0731",
+      "upstream_model": "deepseek-v4-flash:0731",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 191
+    },
+    {
+      "id": "llm7/deepseek-v4-pro",
+      "upstream_model": "deepseek-v4-pro",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "large",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 192
+    },
+    {
+      "id": "llm7/deepseek-v4.1-flash",
+      "upstream_model": "deepseek-v4.1-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 193
+    },
+    {
+      "id": "llm7/gemini-3-flash",
+      "upstream_model": "gemini-3-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 195
+    },
+    {
+      "id": "llm7/gemini-3.1-pro",
+      "upstream_model": "gemini-3.1-pro",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 198
+    },
+    {
+      "id": "llm7/gemini-3.5-flash-lite",
+      "upstream_model": "gemini-3.5-flash-lite",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 199
+    },
+    {
+      "id": "llm7/gemini-3.6-flash",
+      "upstream_model": "gemini-3.6-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 200
+    },
+    {
+      "id": "llm7/gemini-3.6-flash-high",
+      "upstream_model": "gemini-3.6-flash-high",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 201
+    },
+    {
+      "id": "llm7/gemini-3.8-flash",
+      "upstream_model": "gemini-3.8-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 202
+    },
+    {
+      "id": "llm7/gemini-3.8-flash-high",
+      "upstream_model": "gemini-3.8-flash-high",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 203
+    },
+    {
+      "id": "llm7/gemini-4-argon",
+      "upstream_model": "gemini-4-argon",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 204
+    },
+    {
+      "id": "llm7/gemini-nano-banana-2.1",
+      "upstream_model": "gemini-nano-banana-2.1",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 205
+    },
+    {
+      "id": "llm7/glm-5.3-flash",
+      "upstream_model": "glm-5.3-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 206
+    },
+    {
+      "id": "llm7/gpt-oss:120b",
+      "upstream_model": "gpt-oss:120b",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "large",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 211
+    },
+    {
+      "id": "llm7/Inkling-Small",
+      "upstream_model": "Inkling-Small",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 213
+    },
+    {
+      "id": "llm7/kimi-k3.1-pro",
+      "upstream_model": "kimi-k3.1-pro",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "large",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 214
+    },
+    {
+      "id": "llm7/mimo-v2.6-flash",
+      "upstream_model": "mimo-v2.6-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 215
+    },
+    {
+      "id": "llm7/mimo-v2.6-pro",
+      "upstream_model": "mimo-v2.6-pro",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "large",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 216
+    },
+    {
+      "id": "llm7/minimax-m3",
+      "upstream_model": "minimax-m3",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 218
+    },
+    {
+      "id": "llm7/minimax-m3.1-flash",
+      "upstream_model": "minimax-m3.1-flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 219
+    },
+    {
+      "id": "llm7/XiaomiMiMo/MiMo-V2.6-Flash",
+      "upstream_model": "XiaomiMiMo/MiMo-V2.6-Flash",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "fast",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 226
+    },
+    {
+      "id": "llm7/XiaomiMiMo/MiMo-V2.6-Pro",
+      "upstream_model": "XiaomiMiMo/MiMo-V2.6-Pro",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "large",
+      "score": 0,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 227
+    }
+  ]
+}

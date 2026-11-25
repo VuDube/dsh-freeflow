@@ -1,11 +1,15 @@
 export const STATUS_HEALTHY = 'healthy';
 export const STATUS_DEGRADED = 'degraded';
 export const STATUS_UNAVAILABLE = 'unavailable';
+export const STATUS_LOW_QUOTA = 'low_quota';
+export const STATUS_EXHAUSTED = 'exhausted';
 
 const STATUS_RANK = {
   [STATUS_HEALTHY]: 0,
-  [STATUS_DEGRADED]: 1,
-  [STATUS_UNAVAILABLE]: 2,
+  [STATUS_LOW_QUOTA]: 1,
+  [STATUS_DEGRADED]: 2,
+  [STATUS_EXHAUSTED]: 3,
+  [STATUS_UNAVAILABLE]: 4,
 };
 
 export function statusRank(status) {
@@ -18,12 +22,33 @@ export function classifyProbe({ ok, latencyMs, degradedAboveMs }) {
   return { status: STATUS_HEALTHY };
 }
 
+export function utcDayKey(now = new Date()) {
+  return now.toISOString().slice(0, 10);
+}
+
+export function parseRetryAfterMs(value, now = Date.now()) {
+  if (!value) return null;
+  const asSeconds = Number(value);
+  if (Number.isFinite(asSeconds) && asSeconds >= 0) return Math.min(asSeconds * 1000, 24 * 3600 * 1000);
+  const asDate = Date.parse(value);
+  if (!Number.isNaN(asDate)) return Math.min(Math.max(asDate - now, 0), 24 * 3600 * 1000);
+  return null;
+}
+
 export class HealthMonitor {
-  constructor({ intervalMs = 30000, timeoutMs = 4000, latencyWindow = 8, degradedAboveMs = 2000, logger = null } = {}) {
+  constructor({
+    intervalMs = 30000,
+    timeoutMs = 4000,
+    latencyWindow = 8,
+    degradedAboveMs = 2000,
+    quota = {},
+    logger = null,
+  } = {}) {
     this.intervalMs = intervalMs;
     this.timeoutMs = timeoutMs;
     this.latencyWindow = latencyWindow;
     this.degradedAboveMs = degradedAboveMs;
+    this.quota = quota;
     this.logger = logger;
     this.providers = new Map();
     this.timer = null;
@@ -40,10 +65,14 @@ export class HealthMonitor {
       lastError: null,
       consecutiveFailures: 0,
       samples: [],
+      cooldownUntil: null,
+      cooldownReason: null,
+      usage: { day: utcDayKey(), requests: 0, tokensIn: 0, tokensOut: 0 },
     });
   }
 
   snapshot(providerId) {
+    this.rolloverQuota();
     if (providerId) return this.providers.get(providerId) ?? null;
     return Object.fromEntries(this.providers);
   }
@@ -56,6 +85,18 @@ export class HealthMonitor {
     return Math.round(ema);
   }
 
+  rolloverQuota() {
+    const today = utcDayKey();
+    for (const entry of this.providers.values()) {
+      if (entry.usage.day !== today) {
+        entry.usage = { day: today, requests: 0, tokensIn: 0, tokensOut: 0 };
+        if (entry.status === STATUS_EXHAUSTED || entry.status === STATUS_LOW_QUOTA) {
+          entry.status = entry.latencyMs === null ? STATUS_UNAVAILABLE : STATUS_HEALTHY;
+        }
+      }
+    }
+  }
+
   record(providerId, { ok, latencyMs, error = null }) {
     const entry = this.providers.get(providerId);
     if (!entry) return null;
@@ -65,15 +106,62 @@ export class HealthMonitor {
       entry.consecutiveFailures += 1;
       entry.samples = [];
       entry.latencyMs = null;
-      entry.status = STATUS_UNAVAILABLE;
+      entry.status = this.quotaStatus(entry) || STATUS_UNAVAILABLE;
       return entry;
     }
     entry.consecutiveFailures = 0;
     entry.samples.push(latencyMs);
     if (entry.samples.length > this.latencyWindow) entry.samples.shift();
     entry.latencyMs = this.ema(entry.samples);
-    entry.status = latencyMs > this.degradedAboveMs ? STATUS_DEGRADED : STATUS_HEALTHY;
+    entry.status = this.quotaStatus(entry) || (latencyMs > this.degradedAboveMs ? STATUS_DEGRADED : STATUS_HEALTHY);
     return entry;
+  }
+
+  quotaCaps(providerId) {
+    return this.quota[providerId] || this.providers.get(providerId)?.quota || null;
+  }
+
+  quotaStatus(entry) {
+    const caps = this.quotaCaps(entry.id) || {};
+    const { requests, tokensIn, tokensOut } = entry.usage;
+    const tokens = tokensIn + tokensOut;
+    const exhausted = (caps.dailyRequestCap && requests >= caps.dailyRequestCap)
+      || (caps.dailyTokenCap && tokens >= caps.dailyTokenCap);
+    if (exhausted) return STATUS_EXHAUSTED;
+    const low = (caps.dailyRequestCap && requests >= 0.8 * caps.dailyRequestCap)
+      || (caps.dailyTokenCap && tokens >= 0.8 * caps.dailyTokenCap);
+    if (low) return STATUS_LOW_QUOTA;
+    return null;
+  }
+
+  countUsage(providerId, { tokensIn = 0, tokensOut = 0 } = {}) {
+    const entry = this.providers.get(providerId);
+    if (!entry) return null;
+    this.rolloverQuota();
+    entry.usage.requests += 1;
+    entry.usage.tokensIn += tokensIn;
+    entry.usage.tokensOut += tokensOut;
+    entry.status = this.quotaStatus(entry) || entry.status;
+    return entry.usage;
+  }
+
+  cooldown(providerId, ms, reason = null) {
+    const entry = this.providers.get(providerId);
+    if (!entry) return null;
+    entry.cooldownUntil = Date.now() + Math.max(0, Math.round(ms));
+    entry.cooldownReason = reason;
+    return entry;
+  }
+
+  inCooldown(providerId, now = Date.now()) {
+    const entry = this.providers.get(providerId);
+    if (!entry?.cooldownUntil) return false;
+    if (entry.cooldownUntil <= now) {
+      entry.cooldownUntil = null;
+      entry.cooldownReason = null;
+      return false;
+    }
+    return true;
   }
 
   async probe(providerId) {
