@@ -7,6 +7,7 @@
 *Zero cost. Plug-and-play. One endpoint, many free providers.*
 
 [![CI](https://github.com/VuDube/dsh-freeflow/actions/workflows/ci.yml/badge.svg)](https://github.com/VuDube/dsh-freeflow/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-vudube.github.io%2Fdsh--freeflow-blue)](https://vudube.github.io/dsh-freeflow/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH plugin](https://img.shields.io/badge/DSH-plugin-8A2BE2)](https://github.com/deepseek-ai/deepseek-harness)
 
