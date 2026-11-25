@@ -1,0 +1,46 @@
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.repository == 'VuDube/dsh-freeflow'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build docs site
+        run: |
+          mkdir -p _site
+          cp README.md docs/USER_GUIDE.md docs/ARCHITECTURE.md _site/
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en"><head><meta charset="utf-8">
+          <title>dsh-freeflow — VuDube</title>
+          <meta http-equiv="refresh" content="0; url=./README.md">
+          </head><body>
+          <p>dsh-freeflow docs: <a href="./USER_GUIDE.md">User Guide</a> ·
+          <a href="./ARCHITECTURE.md">Architecture</a> ·
+          <a href="./README.md">README</a></p>
+          </body></html>
+          HTML
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
