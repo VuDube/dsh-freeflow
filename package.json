@@ -1,0 +1,48 @@
+{
+  "name": "dsh-freeflow",
+  "version": "0.1.0",
+  "description": "Free-tier LLM router for DeepSeek Harness — zero cost, plug-and-play.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./gateway": "./src/standalone.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "free-llm",
+    "routing",
+    "oauth",
+    "zero-cost",
+    "deepseek-harness",
+    "deepseek",
+    "dsh-plugin",
+    "cordis",
+    "opencode-zen",
+    "freellmpool"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "start": "node src/standalone.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VuDube/dsh-freeflow.git"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

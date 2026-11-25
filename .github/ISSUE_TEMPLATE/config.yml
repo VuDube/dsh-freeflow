@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: DeepSeek Harness discussions
+    url: https://github.com/deepseek-ai/deepseek-harness/discussions
+    about: Core DSH runtime questions (not plugin-specific)
+  - name: freellmpool questions
+    url: https://github.com/0xzr/freellmpool
+    about: Issues with freellmpool itself (proxy, catalog, keys)
+  - name: dsh-gemini-oauth-bridge
+    url: https://github.com/hyqhyq3/dsh-gemini-oauth-bridge
+    about: Google sign-in and OAuth token issues live with the bridge implementation

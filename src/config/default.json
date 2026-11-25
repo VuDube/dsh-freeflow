@@ -1,0 +1,35 @@
+{
+  "defaultProvider": "anonymous",
+  "autoFailover": true,
+  "streaming": true,
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8787,
+    "apiKey": ""
+  },
+  "providers": {
+    "anonymous": {
+      "enabled": true,
+      "baseUrl": "https://opencode.ai/inference/v1",
+      "apiKey": "",
+      "models": []
+    },
+    "freellmpool": {
+      "enabled": true,
+      "baseUrl": "http://127.0.0.1:8080/v1",
+      "apiKey": "",
+      "model": "auto"
+    },
+    "gemini-oauth": {
+      "enabled": true,
+      "endpoint": "",
+      "tokenFile": "~/.dsh/gemini-oauth-bridge.json"
+    }
+  },
+  "healthCheck": {
+    "intervalMs": 30000,
+    "timeoutMs": 4000,
+    "latencyWindow": 8,
+    "degradedAboveMs": 2000
+  }
+}

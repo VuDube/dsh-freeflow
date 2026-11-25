@@ -1,0 +1,7 @@
+- insert:
+    - id: freeflow
+      name: 'dsh-freeflow'
+      config:
+        defaultProvider: anonymous
+        autoFailover: true
+        streaming: true

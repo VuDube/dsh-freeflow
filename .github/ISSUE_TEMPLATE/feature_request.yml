@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest an idea for dsh-freeflow
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What are you trying to achieve? Is it free-tier related?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Router / failover
+        - Health checks
+        - New provider
+        - Docs
+        - DSH integration
+        - Other
+    validations:
+      required: true
