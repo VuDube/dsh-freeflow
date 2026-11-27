@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-26T20:13:53.938Z",
+  "checkedAt": "2026-11-27T02:55:49.495Z",
   "providers": [
     {
       "id": "llm7",
       "label": "LLM7.io (free API key required)",
       "status": "ok",
-      "models": 85,
+      "models": 83,
       "chat": null,
       "note": "llm7 now serves only pro/turbo usage-based models; chat needs a free LLM7_API_KEY. Model listing stays open."
     },
@@ -16,10 +16,11 @@
       "models": 23,
       "chat": {
         "model": "Meta-Llama-3_3-70B-Instruct",
-        "status": 200,
-        "verified": true,
-        "rateLimited": false,
-        "sample": "{\"id\":\"chatcmpl-9609c9a02b1f39f9\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"con"
+        "status": 429,
+        "verified": false,
+        "rateLimited": true,
+        "sample": "{\n  \"message\":\"API rate limit exceeded\",\n  \"request_id\":\"0cea492364106561fd39127e63e30301\"",
+        "retriedAfterRateLimit": true
       }
     },
     {
@@ -32,7 +33,7 @@
         "status": 200,
         "verified": true,
         "rateLimited": false,
-        "sample": "{\"id\":\"gen_01M8CQWJFVNRMTP0446AK0X1KY\",\"object\":\"chat.completion\",\"created\":1795724036,\"mo"
+        "sample": "{\"id\":\"gen-1795748171-73x8D7nqca1AzYK1DMBm\",\"object\":\"chat.completion\",\"created\":179574817"
       }
     },
     {
@@ -43,10 +44,10 @@
       "chat": null
     }
   ],
-  "total": 204,
+  "total": 203,
   "categories": {
     "chat": 104,
-    "fast": 53,
+    "fast": 52,
     "large": 16,
     "reasoning": 15,
     "vision": 6,
@@ -2506,18 +2507,6 @@
       "rank": 207
     },
     {
-      "id": "llm7/glm-5.3-flash",
-      "upstream_model": "glm-5.3-flash",
-      "provider": "llm7",
-      "tier": "usage-based",
-      "category": "fast",
-      "score": 0,
-      "reasons": [
-        "provider unavailable"
-      ],
-      "rank": 208
-    },
-    {
       "id": "llm7/gpt-oss:120b",
       "upstream_model": "gpt-oss:120b",
       "provider": "llm7",
@@ -2527,7 +2516,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 213
+      "rank": 211
     },
     {
       "id": "llm7/Inkling-Small",
@@ -2539,7 +2528,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 215
+      "rank": 213
     },
     {
       "id": "llm7/kimi-k3.1-pro",
@@ -2551,7 +2540,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 216
+      "rank": 214
     },
     {
       "id": "llm7/mimo-v2.6-flash",
@@ -2563,7 +2552,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 217
+      "rank": 215
     },
     {
       "id": "llm7/mimo-v2.6-pro",
@@ -2575,7 +2564,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 218
+      "rank": 216
     },
     {
       "id": "llm7/minimax-m3",
@@ -2587,7 +2576,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 220
+      "rank": 218
     },
     {
       "id": "llm7/minimax-m3.1-flash",
@@ -2599,7 +2588,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 221
+      "rank": 219
     },
     {
       "id": "llm7/Qwen3.8-Flash",
@@ -2611,7 +2600,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 224
+      "rank": 222
     },
     {
       "id": "llm7/XiaomiMiMo/MiMo-V2.6-Flash",
@@ -2623,7 +2612,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 229
+      "rank": 227
     },
     {
       "id": "llm7/XiaomiMiMo/MiMo-V2.6-Pro",
@@ -2635,7 +2624,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 230
+      "rank": 228
     }
   ]
 }

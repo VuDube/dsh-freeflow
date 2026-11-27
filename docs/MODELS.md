@@ -5,14 +5,14 @@
 > its `GET /v1/models` verifies upstream liveness in real time. This file is the
 > auditable evidence trail of what was actually available and answering.
 
-**Checked:** 2026-11-26T20:13:53.938Z · **Providers:** 4 · **Models:** 204
+**Checked:** 2026-11-27T02:55:49.495Z · **Providers:** 4 · **Models:** 203
 
 ## Category summary
 
 | Category | Models |
 |---|---|
 | chat | 104 |
-| fast | 53 |
+| fast | 52 |
 | large | 16 |
 | reasoning | 15 |
 | vision | 6 |
@@ -23,8 +23,8 @@
 
 | Provider | Status | Models | Chat probe |
 |---|---|---|---|
-| llm7 | ok | 85 | skipped |
-| ovhcloud | ok | 23 | ✅ `Meta-Llama-3_3-70B-Instruct` |
+| llm7 | ok | 83 | skipped |
+| ovhcloud | ok | 23 | ⏳ rate limited (429) — model list verified; chat probe retried next hourly run |
 | kilo | ok | 13 | ✅ `kilo-auto/free` |
 | anonymous | ok | 110 | skipped |
 
@@ -227,13 +227,13 @@
 | 205 | `llm7/gemini-4-argon` | llm7 | usage-based | fast |
 | 206 | `llm7/gemini-nano-banana-2.1` | llm7 | usage-based | fast |
 | 207 | `llm7/glm-5-3-flash-uncensored` | llm7 | usage-based | fast |
-| 208 | `llm7/glm-5.3-flash` | llm7 | usage-based | fast |
-| 213 | `llm7/gpt-oss:120b` | llm7 | usage-based | large |
-| 215 | `llm7/Inkling-Small` | llm7 | usage-based | fast |
-| 216 | `llm7/kimi-k3.1-pro` | llm7 | usage-based | large |
-| 217 | `llm7/mimo-v2.6-flash` | llm7 | usage-based | fast |
-| 218 | `llm7/mimo-v2.6-pro` | llm7 | usage-based | large |
-| 220 | `llm7/minimax-m3` | llm7 | usage-based | fast |
+| 211 | `llm7/gpt-oss:120b` | llm7 | usage-based | large |
+| 213 | `llm7/Inkling-Small` | llm7 | usage-based | fast |
+| 214 | `llm7/kimi-k3.1-pro` | llm7 | usage-based | large |
+| 215 | `llm7/mimo-v2.6-flash` | llm7 | usage-based | fast |
+| 216 | `llm7/mimo-v2.6-pro` | llm7 | usage-based | large |
+| 218 | `llm7/minimax-m3` | llm7 | usage-based | fast |
+| 219 | `llm7/minimax-m3.1-flash` | llm7 | usage-based | fast |
 
-...plus 4 more — full list in [MODELS.json](MODELS.json)
+...plus 3 more — full list in [MODELS.json](MODELS.json)
 
