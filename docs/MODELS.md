@@ -5,7 +5,7 @@
 > its `GET /v1/models` verifies upstream liveness in real time. This file is the
 > auditable evidence trail of what was actually available and answering.
 
-**Checked:** 2026-11-27T12:34:48.539Z · **Providers:** 4 · **Models:** 202
+**Checked:** 2026-11-27T22:01:53.990Z · **Providers:** 4 · **Models:** 202
 
 ## Category summary
 
