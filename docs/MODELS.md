@@ -5,14 +5,14 @@
 > its `GET /v1/models` verifies upstream liveness in real time. This file is the
 > auditable evidence trail of what was actually available and answering.
 
-**Checked:** 2026-11-27T02:55:49.495Z · **Providers:** 4 · **Models:** 203
+**Checked:** 2026-11-27T12:34:48.539Z · **Providers:** 4 · **Models:** 202
 
 ## Category summary
 
 | Category | Models |
 |---|---|
 | chat | 104 |
-| fast | 52 |
+| fast | 51 |
 | large | 16 |
 | reasoning | 15 |
 | vision | 6 |
@@ -23,9 +23,9 @@
 
 | Provider | Status | Models | Chat probe |
 |---|---|---|---|
-| llm7 | ok | 83 | skipped |
-| ovhcloud | ok | 23 | ⏳ rate limited (429) — model list verified; chat probe retried next hourly run |
-| kilo | ok | 13 | ✅ `kilo-auto/free` |
+| llm7 | ok | 84 | skipped |
+| ovhcloud | ok | 23 | ✅ `Meta-Llama-3_3-70B-Instruct` |
+| kilo | ok | 12 | ✅ `kilo-auto/free` |
 | anonymous | ok | 110 | skipped |
 
 > **llm7:** llm7 now serves only pro/turbo usage-based models; chat needs a free LLM7_API_KEY. Model listing stays open.
@@ -183,50 +183,49 @@
 | 156 | `anonymous/qwen3.8-flash` | anonymous | keyless | fast |
 | 157 | `anonymous/qwen3.8-max` | anonymous | keyless | large |
 | 160 | `kilo/baidu/ernie-5.5-flash-preview:free` | kilo | keyless | fast |
-| 161 | `kilo/inclusionai/ling-3.2-flash:free` | kilo | keyless | fast |
-| 162 | `kilo/liquid/lfm-3-1.7b:free` | kilo | keyless | small |
-| 163 | `kilo/nvidia/nemotron-3-ultra-550b-a55b:free` | kilo | keyless | large |
-| 164 | `kilo/nvidia/nemotron-3.5-super-vl:free` | kilo | keyless | vision |
-| 165 | `llm7/anthropic/claude-opus-4-6` | llm7 | usage-based | reasoning |
-| 166 | `llm7/anthropic/claude-opus-4-7` | llm7 | usage-based | reasoning |
-| 167 | `llm7/anthropic/claude-opus-4-8` | llm7 | usage-based | reasoning |
-| 168 | `llm7/claude-opus-4-6` | llm7 | usage-based | reasoning |
-| 169 | `llm7/claude-opus-4-8` | llm7 | usage-based | reasoning |
-| 170 | `llm7/claude-opus-5` | llm7 | usage-based | reasoning |
-| 171 | `llm7/claude-opus-5-5` | llm7 | usage-based | reasoning |
-| 172 | `llm7/claude-opus-5.5` | llm7 | usage-based | reasoning |
-| 173 | `llm7/codestral-latest` | llm7 | usage-based | coder |
-| 174 | `llm7/kimi-k2.7-code` | llm7 | usage-based | coder |
-| 175 | `ovhcloud/clef-flash` | ovhcloud | keyless | fast |
-| 176 | `ovhcloud/DeepSeek-V4.1-Flash-1017` | ovhcloud | keyless | fast |
-| 177 | `ovhcloud/gpt-oss-120b` | ovhcloud | keyless | large |
-| 178 | `ovhcloud/Meta-Llama-3_3-70B-Instruct` | ovhcloud | keyless | large |
-| 179 | `ovhcloud/Mistral-Small-3.2-24B-Instruct-2506` | ovhcloud | keyless | fast |
-| 180 | `ovhcloud/nemotron3-nano-30b` | ovhcloud | keyless | fast |
-| 181 | `ovhcloud/nemotron3-omni-30b` | ovhcloud | keyless | vision |
-| 182 | `ovhcloud/Olala-v1.0-mini-7A1B` | ovhcloud | keyless | small |
-| 183 | `ovhcloud/Qwen2.5-VL-72B-Instruct` | ovhcloud | keyless | vision |
-| 184 | `ovhcloud/qwen3-vl-30b-a3b` | ovhcloud | keyless | vision |
-| 185 | `ovhcloud/Qwen3.5-397B-A17B` | ovhcloud | keyless | large |
-| 186 | `ovhcloud/Qwen3.5-9B` | ovhcloud | keyless | small |
-| 187 | `ovhcloud/Qwen3Guard-Gen-0.6B` | ovhcloud | keyless | small |
-| 188 | `ovhcloud/Qwen3Guard-Gen-8B` | ovhcloud | keyless | small |
-| 189 | `llm7/chroma-v.46-flash` | llm7 | usage-based | fast |
-| 190 | `llm7/deepseek-v4-flash-0731-fast` | llm7 | usage-based | fast |
-| 191 | `llm7/deepseek-v4-flash:0731` | llm7 | usage-based | fast |
-| 192 | `llm7/deepseek-v4-pro` | llm7 | usage-based | large |
-| 193 | `llm7/deepseek-v4.1-flash` | llm7 | usage-based | fast |
-| 194 | `llm7/deepseek-v4.1-flash-uncensored` | llm7 | usage-based | fast |
-| 196 | `llm7/gemini-3-flash` | llm7 | usage-based | fast |
-| 199 | `llm7/gemini-3.1-pro` | llm7 | usage-based | fast |
-| 200 | `llm7/gemini-3.5-flash-lite` | llm7 | usage-based | fast |
-| 201 | `llm7/gemini-3.6-flash` | llm7 | usage-based | fast |
-| 202 | `llm7/gemini-3.6-flash-high` | llm7 | usage-based | fast |
-| 203 | `llm7/gemini-3.8-flash` | llm7 | usage-based | fast |
-| 204 | `llm7/gemini-3.8-flash-high` | llm7 | usage-based | fast |
-| 205 | `llm7/gemini-4-argon` | llm7 | usage-based | fast |
-| 206 | `llm7/gemini-nano-banana-2.1` | llm7 | usage-based | fast |
-| 207 | `llm7/glm-5-3-flash-uncensored` | llm7 | usage-based | fast |
+| 161 | `kilo/liquid/lfm-3-1.7b:free` | kilo | keyless | small |
+| 162 | `kilo/nvidia/nemotron-3-ultra-550b-a55b:free` | kilo | keyless | large |
+| 163 | `kilo/nvidia/nemotron-3.5-super-vl:free` | kilo | keyless | vision |
+| 164 | `llm7/anthropic/claude-opus-4-6` | llm7 | usage-based | reasoning |
+| 165 | `llm7/anthropic/claude-opus-4-7` | llm7 | usage-based | reasoning |
+| 166 | `llm7/anthropic/claude-opus-4-8` | llm7 | usage-based | reasoning |
+| 167 | `llm7/claude-opus-4-6` | llm7 | usage-based | reasoning |
+| 168 | `llm7/claude-opus-4-8` | llm7 | usage-based | reasoning |
+| 169 | `llm7/claude-opus-5` | llm7 | usage-based | reasoning |
+| 170 | `llm7/claude-opus-5-5` | llm7 | usage-based | reasoning |
+| 171 | `llm7/claude-opus-5.5` | llm7 | usage-based | reasoning |
+| 172 | `llm7/codestral-latest` | llm7 | usage-based | coder |
+| 173 | `llm7/kimi-k2.7-code` | llm7 | usage-based | coder |
+| 174 | `ovhcloud/clef-flash` | ovhcloud | keyless | fast |
+| 175 | `ovhcloud/DeepSeek-V4.1-Flash-1017` | ovhcloud | keyless | fast |
+| 176 | `ovhcloud/gpt-oss-120b` | ovhcloud | keyless | large |
+| 177 | `ovhcloud/Meta-Llama-3_3-70B-Instruct` | ovhcloud | keyless | large |
+| 178 | `ovhcloud/Mistral-Small-3.2-24B-Instruct-2506` | ovhcloud | keyless | fast |
+| 179 | `ovhcloud/nemotron3-nano-30b` | ovhcloud | keyless | fast |
+| 180 | `ovhcloud/nemotron3-omni-30b` | ovhcloud | keyless | vision |
+| 181 | `ovhcloud/Olala-v1.0-mini-7A1B` | ovhcloud | keyless | small |
+| 182 | `ovhcloud/Qwen2.5-VL-72B-Instruct` | ovhcloud | keyless | vision |
+| 183 | `ovhcloud/qwen3-vl-30b-a3b` | ovhcloud | keyless | vision |
+| 184 | `ovhcloud/Qwen3.5-397B-A17B` | ovhcloud | keyless | large |
+| 185 | `ovhcloud/Qwen3.5-9B` | ovhcloud | keyless | small |
+| 186 | `ovhcloud/Qwen3Guard-Gen-0.6B` | ovhcloud | keyless | small |
+| 187 | `ovhcloud/Qwen3Guard-Gen-8B` | ovhcloud | keyless | small |
+| 188 | `llm7/chroma-v.46-flash` | llm7 | usage-based | fast |
+| 189 | `llm7/deepseek-v4-flash-0731-fast` | llm7 | usage-based | fast |
+| 190 | `llm7/deepseek-v4-flash:0731` | llm7 | usage-based | fast |
+| 191 | `llm7/deepseek-v4-pro` | llm7 | usage-based | large |
+| 192 | `llm7/deepseek-v4.1-flash` | llm7 | usage-based | fast |
+| 193 | `llm7/deepseek-v4.1-flash-uncensored` | llm7 | usage-based | fast |
+| 195 | `llm7/gemini-3-flash` | llm7 | usage-based | fast |
+| 198 | `llm7/gemini-3.1-pro` | llm7 | usage-based | fast |
+| 199 | `llm7/gemini-3.5-flash-lite` | llm7 | usage-based | fast |
+| 200 | `llm7/gemini-3.6-flash` | llm7 | usage-based | fast |
+| 201 | `llm7/gemini-3.6-flash-high` | llm7 | usage-based | fast |
+| 202 | `llm7/gemini-3.8-flash` | llm7 | usage-based | fast |
+| 203 | `llm7/gemini-3.8-flash-high` | llm7 | usage-based | fast |
+| 204 | `llm7/gemini-4-argon` | llm7 | usage-based | fast |
+| 205 | `llm7/gemini-nano-banana-2.1` | llm7 | usage-based | fast |
+| 206 | `llm7/glm-5-3-flash-uncensored` | llm7 | usage-based | fast |
 | 211 | `llm7/gpt-oss:120b` | llm7 | usage-based | large |
 | 213 | `llm7/Inkling-Small` | llm7 | usage-based | fast |
 | 214 | `llm7/kimi-k3.1-pro` | llm7 | usage-based | large |
@@ -234,6 +233,7 @@
 | 216 | `llm7/mimo-v2.6-pro` | llm7 | usage-based | large |
 | 218 | `llm7/minimax-m3` | llm7 | usage-based | fast |
 | 219 | `llm7/minimax-m3.1-flash` | llm7 | usage-based | fast |
+| 222 | `llm7/Qwen3.8-Flash` | llm7 | usage-based | fast |
 
-...plus 3 more — full list in [MODELS.json](MODELS.json)
+...plus 2 more — full list in [MODELS.json](MODELS.json)
 
