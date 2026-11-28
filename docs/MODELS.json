@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-28T03:57:09.988Z",
+  "checkedAt": "2026-11-28T13:07:59.715Z",
   "providers": [
     {
       "id": "llm7",
       "label": "LLM7.io (free API key required)",
       "status": "ok",
-      "models": 84,
+      "models": 85,
       "chat": null,
       "note": "llm7 now serves only pro/turbo usage-based models; chat needs a free LLM7_API_KEY. Model listing stays open."
     },
@@ -19,7 +19,7 @@
         "status": 429,
         "verified": false,
         "rateLimited": true,
-        "sample": "{\n  \"message\":\"API rate limit exceeded\",\n  \"request_id\":\"8164eb67b4dcc0360369601d2512ff6d\"",
+        "sample": "{\n  \"message\":\"API rate limit exceeded\",\n  \"request_id\":\"f73e934fe1280e19711eba0dbc95b831\"",
         "retriedAfterRateLimit": true
       }
     },
@@ -30,11 +30,10 @@
       "models": 12,
       "chat": {
         "model": "kilo-auto/free",
-        "status": 429,
-        "verified": false,
-        "rateLimited": true,
-        "sample": "{\"error\":{\"code\":\"PROMOTION_MODEL_LIMIT_REACHED\",\"message\":\"Sign up for free to continue a",
-        "retriedAfterRateLimit": true
+        "status": 200,
+        "verified": true,
+        "rateLimited": false,
+        "sample": "{\"id\":\"gen_01M8H4AS69XCEGGCD569PGNTPR\",\"object\":\"chat.completion\",\"created\":1795871303,\"mo"
       }
     },
     {
@@ -45,9 +44,9 @@
       "chat": null
     }
   ],
-  "total": 202,
+  "total": 203,
   "categories": {
-    "chat": 104,
+    "chat": 105,
     "fast": 51,
     "large": 16,
     "reasoning": 15,
@@ -1495,6 +1494,18 @@
       "rank": 113
     },
     {
+      "id": "llm7/mistral-Nemo-Instruct-2407",
+      "upstream_model": "mistral-Nemo-Instruct-2407",
+      "provider": "llm7",
+      "tier": "usage-based",
+      "category": "chat",
+      "score": 2,
+      "reasons": [
+        "provider unavailable"
+      ],
+      "rank": 114
+    },
+    {
       "id": "llm7/muse-spark-open",
       "upstream_model": "muse-spark-open",
       "provider": "llm7",
@@ -1504,7 +1515,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 114
+      "rank": 115
     },
     {
       "id": "anonymous/deepseek-v4-pro",
@@ -1517,7 +1528,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 118
+      "rank": 119
     },
     {
       "id": "anonymous/deepseek-v4.1-flash",
@@ -1530,7 +1541,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 119
+      "rank": 120
     },
     {
       "id": "anonymous/deepseek-v4.1-flash-free",
@@ -1543,7 +1554,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 120
+      "rank": 121
     },
     {
       "id": "anonymous/gemini-3.5-flash",
@@ -1556,7 +1567,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 121
+      "rank": 122
     },
     {
       "id": "anonymous/gemini-3.5-flash-lite",
@@ -1569,7 +1580,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 122
+      "rank": 123
     },
     {
       "id": "anonymous/gemini-3.6-flash",
@@ -1582,7 +1593,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 123
+      "rank": 124
     },
     {
       "id": "anonymous/gemini-3.7-flash",
@@ -1595,7 +1606,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 124
+      "rank": 125
     },
     {
       "id": "anonymous/gemini-3.8-flash",
@@ -1608,7 +1619,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 125
+      "rank": 126
     },
     {
       "id": "anonymous/gemini-4-argon",
@@ -1621,7 +1632,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 126
+      "rank": 127
     },
     {
       "id": "anonymous/gemini-4-carbon",
@@ -1634,7 +1645,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 127
+      "rank": 128
     },
     {
       "id": "anonymous/gemini-4-hydrogen",
@@ -1647,7 +1658,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 128
+      "rank": 129
     },
     {
       "id": "anonymous/gemini-4-neon",
@@ -1660,7 +1671,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 129
+      "rank": 130
     },
     {
       "id": "anonymous/gemini-decision-1",
@@ -1673,7 +1684,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 130
+      "rank": 131
     },
     {
       "id": "anonymous/gemini-nano-banana-2.1",
@@ -1686,7 +1697,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 133
+      "rank": 134
     },
     {
       "id": "anonymous/gemini-omni-1.2-flash",
@@ -1699,7 +1710,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 134
+      "rank": 135
     },
     {
       "id": "anonymous/glm-5.3-flash",
@@ -1712,7 +1723,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 135
+      "rank": 136
     },
     {
       "id": "anonymous/gpt-5-nano",
@@ -1725,7 +1736,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 136
+      "rank": 137
     },
     {
       "id": "anonymous/gpt-5.1-codex-max",
@@ -1738,7 +1749,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 137
+      "rank": 138
     },
     {
       "id": "anonymous/gpt-5.1-codex-mini",
@@ -1751,7 +1762,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 138
+      "rank": 139
     },
     {
       "id": "anonymous/gpt-5.4-mini",
@@ -1764,7 +1775,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 139
+      "rank": 140
     },
     {
       "id": "anonymous/gpt-5.4-nano",
@@ -1777,7 +1788,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 140
+      "rank": 141
     },
     {
       "id": "anonymous/gpt-5.4-pro",
@@ -1790,7 +1801,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 141
+      "rank": 142
     },
     {
       "id": "anonymous/gpt-5.5-pro",
@@ -1803,7 +1814,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 142
+      "rank": 143
     },
     {
       "id": "anonymous/grok-imagine-video-1.5-lite",
@@ -1816,7 +1827,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 145
+      "rank": 146
     },
     {
       "id": "anonymous/hy4-flash-free",
@@ -1829,7 +1840,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 146
+      "rank": 147
     },
     {
       "id": "anonymous/kimi-k3.1-pro",
@@ -1842,7 +1853,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 147
+      "rank": 148
     },
     {
       "id": "anonymous/mimo-v2.6-flash-free",
@@ -1855,7 +1866,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 148
+      "rank": 149
     },
     {
       "id": "anonymous/minimax-m2.5",
@@ -1868,7 +1879,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 149
+      "rank": 150
     },
     {
       "id": "anonymous/minimax-m2.7",
@@ -1881,7 +1892,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 150
+      "rank": 151
     },
     {
       "id": "anonymous/minimax-m3",
@@ -1894,7 +1905,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 151
+      "rank": 152
     },
     {
       "id": "anonymous/mistral-large-4",
@@ -1907,7 +1918,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 153
+      "rank": 154
     },
     {
       "id": "anonymous/nemotron-3.5-super-vl-free",
@@ -1920,7 +1931,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 154
+      "rank": 155
     },
     {
       "id": "anonymous/qwen3.8-flash",
@@ -1933,7 +1944,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 156
+      "rank": 157
     },
     {
       "id": "anonymous/qwen3.8-max",
@@ -1946,7 +1957,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 157
+      "rank": 158
     },
     {
       "id": "kilo/baidu/ernie-5.5-flash-preview:free",
@@ -1959,7 +1970,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 160
+      "rank": 161
     },
     {
       "id": "kilo/liquid/lfm-3-1.7b:free",
@@ -1972,7 +1983,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 161
+      "rank": 162
     },
     {
       "id": "kilo/nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -1985,7 +1996,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 162
+      "rank": 163
     },
     {
       "id": "kilo/nvidia/nemotron-3.5-super-vl:free",
@@ -1998,7 +2009,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 163
+      "rank": 164
     },
     {
       "id": "llm7/anthropic/claude-opus-4-6",
@@ -2010,7 +2021,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 164
+      "rank": 165
     },
     {
       "id": "llm7/anthropic/claude-opus-4-7",
@@ -2022,7 +2033,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 165
+      "rank": 166
     },
     {
       "id": "llm7/anthropic/claude-opus-4-8",
@@ -2034,7 +2045,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 166
+      "rank": 167
     },
     {
       "id": "llm7/claude-opus-4-6",
@@ -2046,7 +2057,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 167
+      "rank": 168
     },
     {
       "id": "llm7/claude-opus-4-8",
@@ -2058,7 +2069,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 168
+      "rank": 169
     },
     {
       "id": "llm7/claude-opus-5",
@@ -2070,7 +2081,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 169
+      "rank": 170
     },
     {
       "id": "llm7/claude-opus-5-5",
@@ -2082,7 +2093,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 170
+      "rank": 171
     },
     {
       "id": "llm7/claude-opus-5.5",
@@ -2094,7 +2105,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 171
+      "rank": 172
     },
     {
       "id": "llm7/codestral-latest",
@@ -2106,7 +2117,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 172
+      "rank": 173
     },
     {
       "id": "llm7/kimi-k2.7-code",
@@ -2118,7 +2129,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 173
+      "rank": 174
     },
     {
       "id": "ovhcloud/clef-flash",
@@ -2131,7 +2142,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 174
+      "rank": 175
     },
     {
       "id": "ovhcloud/DeepSeek-V4.1-Flash-1017",
@@ -2144,7 +2155,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 175
+      "rank": 176
     },
     {
       "id": "ovhcloud/gpt-oss-120b",
@@ -2157,7 +2168,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 176
+      "rank": 177
     },
     {
       "id": "ovhcloud/Meta-Llama-3_3-70B-Instruct",
@@ -2170,7 +2181,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 177
+      "rank": 178
     },
     {
       "id": "ovhcloud/Mistral-Small-3.2-24B-Instruct-2506",
@@ -2183,7 +2194,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 178
+      "rank": 179
     },
     {
       "id": "ovhcloud/nemotron3-nano-30b",
@@ -2196,7 +2207,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 179
+      "rank": 180
     },
     {
       "id": "ovhcloud/nemotron3-omni-30b",
@@ -2209,7 +2220,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 180
+      "rank": 181
     },
     {
       "id": "ovhcloud/Olala-v1.0-mini-7A1B",
@@ -2222,7 +2233,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 181
+      "rank": 182
     },
     {
       "id": "ovhcloud/Qwen2.5-VL-72B-Instruct",
@@ -2235,7 +2246,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 182
+      "rank": 183
     },
     {
       "id": "ovhcloud/qwen3-vl-30b-a3b",
@@ -2248,7 +2259,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 183
+      "rank": 184
     },
     {
       "id": "ovhcloud/Qwen3.5-397B-A17B",
@@ -2261,7 +2272,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 184
+      "rank": 185
     },
     {
       "id": "ovhcloud/Qwen3.5-9B",
@@ -2274,7 +2285,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 185
+      "rank": 186
     },
     {
       "id": "ovhcloud/Qwen3Guard-Gen-0.6B",
@@ -2287,7 +2298,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 186
+      "rank": 187
     },
     {
       "id": "ovhcloud/Qwen3Guard-Gen-8B",
@@ -2300,7 +2311,7 @@
         "provider unavailable",
         "zero-credential tier"
       ],
-      "rank": 187
+      "rank": 188
     },
     {
       "id": "llm7/chroma-v.46-flash",
@@ -2312,7 +2323,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 188
+      "rank": 189
     },
     {
       "id": "llm7/deepseek-v4-flash-0731-fast",
@@ -2324,7 +2335,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 189
+      "rank": 190
     },
     {
       "id": "llm7/deepseek-v4-flash:0731",
@@ -2336,7 +2347,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 190
+      "rank": 191
     },
     {
       "id": "llm7/deepseek-v4-pro",
@@ -2348,7 +2359,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 191
+      "rank": 192
     },
     {
       "id": "llm7/deepseek-v4.1-flash",
@@ -2360,7 +2371,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 192
+      "rank": 193
     },
     {
       "id": "llm7/deepseek-v4.1-flash-uncensored",
@@ -2372,7 +2383,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 193
+      "rank": 194
     },
     {
       "id": "llm7/gemini-3-flash",
@@ -2384,7 +2395,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 195
+      "rank": 196
     },
     {
       "id": "llm7/gemini-3.1-pro",
@@ -2396,7 +2407,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 198
+      "rank": 199
     },
     {
       "id": "llm7/gemini-3.5-flash-lite",
@@ -2408,7 +2419,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 199
+      "rank": 200
     },
     {
       "id": "llm7/gemini-3.6-flash",
@@ -2420,7 +2431,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 200
+      "rank": 201
     },
     {
       "id": "llm7/gemini-3.6-flash-high",
@@ -2432,7 +2443,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 201
+      "rank": 202
     },
     {
       "id": "llm7/gemini-3.8-flash",
@@ -2444,7 +2455,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 202
+      "rank": 203
     },
     {
       "id": "llm7/gemini-3.8-flash-high",
@@ -2456,7 +2467,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 203
+      "rank": 204
     },
     {
       "id": "llm7/gemini-4-argon",
@@ -2468,7 +2479,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 204
+      "rank": 205
     },
     {
       "id": "llm7/gemini-nano-banana-2.1",
@@ -2480,7 +2491,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 205
+      "rank": 206
     },
     {
       "id": "llm7/glm-5-3-flash-uncensored",
@@ -2492,7 +2503,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 206
+      "rank": 207
     },
     {
       "id": "llm7/gpt-oss:120b",
@@ -2504,7 +2515,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 211
+      "rank": 212
     },
     {
       "id": "llm7/Inkling-Small",
@@ -2516,7 +2527,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 213
+      "rank": 214
     },
     {
       "id": "llm7/kimi-k3.1-pro",
@@ -2528,7 +2539,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 214
+      "rank": 215
     },
     {
       "id": "llm7/mimo-v2.6-flash",
@@ -2540,7 +2551,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 215
+      "rank": 216
     },
     {
       "id": "llm7/mimo-v2.6-pro",
@@ -2552,7 +2563,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 216
+      "rank": 217
     },
     {
       "id": "llm7/minimax-m3",
@@ -2564,7 +2575,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 218
+      "rank": 219
     },
     {
       "id": "llm7/minimax-m3.1-flash",
@@ -2576,7 +2587,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 219
+      "rank": 220
     },
     {
       "id": "llm7/Qwen3.8-Flash",
@@ -2588,7 +2599,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 222
+      "rank": 223
     },
     {
       "id": "llm7/XiaomiMiMo/MiMo-V2.6-Flash",
@@ -2600,7 +2611,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 227
+      "rank": 228
     },
     {
       "id": "llm7/XiaomiMiMo/MiMo-V2.6-Pro",
@@ -2612,7 +2623,7 @@
       "reasons": [
         "provider unavailable"
       ],
-      "rank": 228
+      "rank": 229
     }
   ]
 }
