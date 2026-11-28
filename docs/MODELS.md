@@ -5,7 +5,7 @@
 > its `GET /v1/models` verifies upstream liveness in real time. This file is the
 > auditable evidence trail of what was actually available and answering.
 
-**Checked:** 2026-11-27T22:01:53.990Z · **Providers:** 4 · **Models:** 202
+**Checked:** 2026-11-28T03:57:09.988Z · **Providers:** 4 · **Models:** 202
 
 ## Category summary
 
@@ -24,8 +24,8 @@
 | Provider | Status | Models | Chat probe |
 |---|---|---|---|
 | llm7 | ok | 84 | skipped |
-| ovhcloud | ok | 23 | ✅ `Meta-Llama-3_3-70B-Instruct` |
-| kilo | ok | 12 | ✅ `kilo-auto/free` |
+| ovhcloud | ok | 23 | ⏳ rate limited (429) — model list verified; chat probe retried next hourly run |
+| kilo | ok | 12 | ⏳ rate limited (429) — model list verified; chat probe retried next hourly run |
 | anonymous | ok | 110 | skipped |
 
 > **llm7:** llm7 now serves only pro/turbo usage-based models; chat needs a free LLM7_API_KEY. Model listing stays open.

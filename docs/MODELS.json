@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-27T22:01:53.990Z",
+  "checkedAt": "2026-11-28T03:57:09.988Z",
   "providers": [
     {
       "id": "llm7",
@@ -16,10 +16,11 @@
       "models": 23,
       "chat": {
         "model": "Meta-Llama-3_3-70B-Instruct",
-        "status": 200,
-        "verified": true,
-        "rateLimited": false,
-        "sample": "{\"id\":\"chatcmpl-bfabd8e8f6f0ee02\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"con"
+        "status": 429,
+        "verified": false,
+        "rateLimited": true,
+        "sample": "{\n  \"message\":\"API rate limit exceeded\",\n  \"request_id\":\"8164eb67b4dcc0360369601d2512ff6d\"",
+        "retriedAfterRateLimit": true
       }
     },
     {
@@ -29,10 +30,11 @@
       "models": 12,
       "chat": {
         "model": "kilo-auto/free",
-        "status": 200,
-        "verified": true,
-        "rateLimited": false,
-        "sample": "{\"id\":\"gen-1795816917-JT51eJVkI6Edy5HEFLBH\",\"object\":\"chat.completion\",\"created\":179581691"
+        "status": 429,
+        "verified": false,
+        "rateLimited": true,
+        "sample": "{\"error\":{\"code\":\"PROMOTION_MODEL_LIMIT_REACHED\",\"message\":\"Sign up for free to continue a",
+        "retriedAfterRateLimit": true
       }
     },
     {
